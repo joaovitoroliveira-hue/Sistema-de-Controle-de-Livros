@@ -8,9 +8,10 @@ int carregarLivros(Livro acervo[]){
 
     if (arquivo == NULL){
         printf("Aviso: Nao foi possivel abrir o arquivo livros.txt \n");
+        return 0;
     }
     while(total < MAX_LIVROS && fscanf(arquivo, "%d%s%d%d",&acervo[total].codigo, 
-           &acervo[total].titulo, 
+           acervo[total].titulo, 
            &acervo[total].ano, 
            &acervo[total].quantidade) == 4){
             total++;
@@ -84,10 +85,11 @@ int carregarUsuarios(Usuario lista[]){
 
     if (arquivo == NULL){
         printf("Aviso: Nao foi possivel abrir o arquivo usuarios.txt \n");
+        return 0;
     }
-    while(total < MAX_LIVROS && fscanf(arquivo, "%d%s%s",&lista[total].matricula, 
-           &lista[total].nome, 
-           &lista[total].curso) == 4){
+    while(total < MAX_USUARIO && fscanf(arquivo, "%d%s%s",&lista[total].matricula, 
+           lista[total].nome, 
+           lista[total].curso) == 3){
             total++;
            }
            fclose(arquivo);
@@ -107,7 +109,7 @@ int adicionarUsuario(Usuario lista[], int quantidade) {
     scanf("%s", lista[quantidade].nome);
     
     printf("Digite o curso do usuario: ");
-    scanf("%d", &lista[quantidade].curso);
+    scanf("%s", lista[quantidade].curso);
 
     printf("\nUsuario '%s' cadastrado com sucesso!\n", lista[quantidade].nome);
      return (quantidade + 1);
@@ -125,7 +127,7 @@ void buscarUsuario(Usuario lista[], int quantidade){
 
     for(int i = 0; i < quantidade; i++){
         if(lista[i].matricula == codigoBusca){
-            printf("Livro encontrado!\n");
+            printf("Usuario encontrado!\n");
             printf("Nome: %s\n", lista[i].nome);
             printf("Curso: %s\n", lista[i].curso);
             encontrou = 1;

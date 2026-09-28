@@ -1,9 +1,13 @@
 #include <stdio.h>
-#include "biblioteca.c"
+#include "biblioteca.h"
 
 int main() {
     Livro acervo[MAX_LIVROS];
-    int quantidadeAtual = 0, opcao;
+    Usuario lista[MAX_USUARIO];
+
+    int quantidadeAtual = carregarLivros(acervo);
+    int quantidadeAtual2 = carregarUsuarios(lista);
+    int opcao;
 
     do{
         printf("\n--- Sistema Bibliotecario ---\n");
@@ -27,13 +31,13 @@ int main() {
                 imprimirLivros(acervo, quantidadeAtual);
                 break;
             case 4:
-                
+                quantidadeAtual2 = adicionarUsuario(lista, quantidadeAtual2);
                 break;
             case 5:
-                
+                buscarUsuario(lista, quantidadeAtual2);
                 break;
             case 6:
-                
+                imprimirUsuarios(lista, quantidadeAtual2);
                 break;
             case 7:
                 printf("\nSaindo do sistema...\n");
