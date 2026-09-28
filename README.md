@@ -18,5 +18,5 @@ Sistema de gerenciamento bibliotecário desenvolvido em **C**, focado na otimiza
 
 ## 🚀 Como Compilar e Executar
 - Certifique-se de ter o compilador GCC, instalado no seu ambiente
-- Compile: gcc main.c arquivo.h -o nome_executavel 
-- Execute: .\nome_executavel.exe
+- Compile: gcc main.c biblioteca.c -o Biblioteca 
+- Execute: .\Biblioteca.exe
