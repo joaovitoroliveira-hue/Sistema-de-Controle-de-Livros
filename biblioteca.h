@@ -9,5 +9,9 @@ typedef struct {
     int quantidade;
 } Livro;
 
+int carregarLivros(Livro acervo[]);
+int adicionarLivro(Livro acervo[], int quantidade);
+void buscarLivros(Livro acervo[], int quantidade);
+void imprimirLivros(Livro acervo[], int quantidade);
 
 #endif
