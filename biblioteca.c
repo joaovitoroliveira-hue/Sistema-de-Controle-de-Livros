@@ -40,3 +40,29 @@ int adicionarLivro(Livro acervo[], int quantidade){
     printf("\nLivro '%s' adicionado com sucesso!\n", acervo[quantidade].titulo);
      return (quantidade + 1);
 }
+
+void buscarLivros(Livro acervo[], int quantidade){
+    int codigoBusca;
+    int encontrou = 0;
+    if (quantidade == 0){
+        printf("\nO acervo esta vazio.\n");
+    }
+    printf("\n--- Buscar Livro ---\n");
+    printf("--- Digite o codigo do livro que deseja buscar: ---\n");
+    scanf("%d", &codigoBusca);
+
+    for(int i = 0; i < quantidade; i++){
+        if(acervo[i].codigo == codigoBusca){
+            printf("Livro encontrado!\n");
+            printf("Titulo: %s\n", acervo[i].titulo);
+            printf("Ano: %d\n", acervo[i].ano);
+            printf("Quantidade: %d\n", acervo[i].quantidade);
+            encontrou = 1;
+            break;
+        }
+    }
+    if(!encontrou){
+        printf("\nLivro com o codigo %d nao foi encontrado no acervo", codigoBusca);
+    }
+}
+
