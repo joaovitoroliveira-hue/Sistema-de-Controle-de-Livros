@@ -18,3 +18,25 @@ int carregarLivros(Livro acervo[]){
            fclose(arquivo);
            return(total);
 }
+
+int adicionarLivro(Livro acervo[], int quantidade){
+    if(quantidade >= MAX_LIVROS){
+        printf("O acervo está cheio, limite de livros atingido");
+        return quantidade;
+    }
+    printf("\n--- Adicionar novo Livro ---\n");
+    printf("Digite o codigo do livro: ");
+    scanf("%d", &acervo[quantidade].codigo);
+    
+    printf("Digite o titulo do livro (sem espacos): ");
+    scanf("%s", acervo[quantidade].titulo);
+    
+    printf("Digite o ano de publicacao: ");
+    scanf("%d", &acervo[quantidade].ano);
+    
+    printf("Digite a quantidade disponivel: ");
+    scanf("%d", &acervo[quantidade].quantidade);
+
+    printf("\nLivro '%s' adicionado com sucesso!\n", acervo[quantidade].titulo);
+     return (quantidade + 1);
+}
