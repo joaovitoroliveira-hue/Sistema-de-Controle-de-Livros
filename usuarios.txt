@@ -1,0 +1,10 @@
+857468 JoaoVitor EngenhariaDeDados
+857469 LucasMatheus AnaliseDeDados
+857470 SimoniOliveira Enfermagem
+857471 HelbertSilva Matematica
+857472 SamuelAugusto Biomedicina
+857473 MarianaLopes Odontologia
+857474 CeciliaOliveira Psicologia
+857475 MariaClara Direito
+857476 FernandoAraujo SistemasDeInternet
+867477 AugustoCesar Medicina

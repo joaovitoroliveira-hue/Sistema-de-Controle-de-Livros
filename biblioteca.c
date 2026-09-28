@@ -77,3 +77,19 @@ void imprimirLivros(Livro acervo[], int quantidade){
     printf("------------------------------------------");
     
 }
+
+int carregarUsuarios(Usuario lista[]){
+    FILE *arquivo = fopen("usuarios.txt", "r");
+    int total = 0;
+
+    if (arquivo == NULL){
+        printf("Aviso: Nao foi possivel abrir o arquivo usuarios.txt \n");
+    }
+    while(total < MAX_LIVROS && fscanf(arquivo, "%d%s%s",&lista[total].matricula, 
+           &lista[total].nome, 
+           &lista[total].curso) == 4){
+            total++;
+           }
+           fclose(arquivo);
+           return(total);
+}

@@ -1,6 +1,7 @@
 #ifndef BIBLIOTECA_H
 #define BIBLIOTECA_H
 #define MAX_LIVROS 100
+#define MAX_USUARIO 100
 
 typedef struct {
     int codigo;
