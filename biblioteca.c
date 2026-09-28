@@ -66,3 +66,14 @@ void buscarLivros(Livro acervo[], int quantidade){
     }
 }
 
+void imprimirLivros(Livro acervo[], int quantidade){
+    printf("\n--- Lista de Livros (%d cadastrados) ---\n", quantidade);
+    if(quantidade ==0){
+        printf("O acervo está vazio. \n");
+    }
+    for (int i = 0; i < quantidade; i++){
+        printf("Codigo: %d | Titulo: %s | Ano: %d | Quantidade: %d \n", acervo[i].codigo, acervo[i].titulo, acervo[i].ano, acervo[i].quantidade);
+    }
+    printf("------------------------------------------");
+    
+}
