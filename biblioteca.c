@@ -136,3 +136,15 @@ void buscarUsuario(Usuario lista[], int quantidade){
         printf("\nO usuario com a matricula %d nao foi encontrado no sistema", codigoBusca);
     }
 }
+
+void imprimirUsuarios(Usuario lista[], int quantidade){
+    printf("\n--- Lista de Usuarios (%d cadastrados) ---\n", quantidade);
+    if(quantidade ==0){
+        printf("Nao tem usuarios cadastrados no sistema. \n");
+    }
+    for (int i = 0; i < quantidade; i++){
+        printf("Matricula: %d | Nome: %s | Curso: %s\n", lista[i].matricula, lista[i].nome, lista[i].curso);
+    }
+    printf("------------------------------------------");
+    
+}
