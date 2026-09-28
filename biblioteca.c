@@ -93,3 +93,46 @@ int carregarUsuarios(Usuario lista[]){
            fclose(arquivo);
            return(total);
 }
+
+int adicionarUsuario(Usuario lista[], int quantidade) {
+        if(quantidade >= MAX_USUARIO){
+        printf("Erro: Quantidade Maxima de Usuarios Atingida\n");
+        return quantidade;
+    }
+    printf("\n--- Cadastrar Usuario ---\n");
+    printf("Digite a matricula do usuario: ");
+    scanf("%d", &lista[quantidade].matricula);
+    
+    printf("Digite o nome do usuario(sem espacos): ");
+    scanf("%s", lista[quantidade].nome);
+    
+    printf("Digite o curso do usuario: ");
+    scanf("%d", &lista[quantidade].curso);
+
+    printf("\nUsuario '%s' cadastrado com sucesso!\n", lista[quantidade].nome);
+     return (quantidade + 1);
+}
+
+void buscarUsuario(Usuario lista[], int quantidade){
+    int codigoBusca;
+    int encontrou = 0;
+    if (quantidade == 0){
+        printf("\nO acervo esta vazio.\n");
+    }
+    printf("\n--- Buscar Usuario ---\n");
+    printf("--- Digite o numero da matricula do usuario deseja buscar: ---\n");
+    scanf("%d", &codigoBusca);
+
+    for(int i = 0; i < quantidade; i++){
+        if(lista[i].matricula == codigoBusca){
+            printf("Livro encontrado!\n");
+            printf("Nome: %s\n", lista[i].nome);
+            printf("Curso: %s\n", lista[i].curso);
+            encontrou = 1;
+            break;
+        }
+    }
+    if(!encontrou){
+        printf("\nO usuario com a matricula %d nao foi encontrado no sistema", codigoBusca);
+    }
+}

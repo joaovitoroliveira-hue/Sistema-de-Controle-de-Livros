@@ -23,7 +23,7 @@ void imprimirLivros(Livro acervo[], int quantidade);
 
 int carregarUsuarios(Usuario lista[]);
 int adicionarUsuario(Usuario lista[], int quantidade);
-void buscarUsuario(Usuario lista[], int quantidade);
+void buscarUsuario(Usuario lista[], char nome);
 void imprimirUsuarios(Usuario lista[], int quantidade);
 
 #endif
