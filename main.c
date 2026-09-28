@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include "biblioteca.c"
 
 int main() {
-    int opcao = 0;
+    Livro acervo[MAX_LIVROS];
+    int quantidadeAtual = 0, opcao;
 
     do{
         printf("\n--- Sistema Bibliotecario ---\n");
@@ -16,13 +18,13 @@ int main() {
         scanf("%d", &opcao); 
         switch(opcao) {
             case 1:
-                
+                quantidadeAtual = adicionarLivro(acervo, quantidadeAtual);
                 break;
             case 2:
-                
+                buscarLivros(acervo, quantidadeAtual);
                 break;
             case 3:
-                
+                imprimirLivros(acervo, quantidadeAtual);
                 break;
             case 4:
                 
