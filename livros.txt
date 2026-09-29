@@ -1,4 +1,4 @@
-101 Algoritmos 2020 5
+101 Matematica 2020 5
 102 BancoDeDados 2018 3
 103 Redes 2022 7
 104 Compiladores 2015 2
