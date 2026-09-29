@@ -45,7 +45,7 @@ int adicionarLivro(Livro acervo[], int quantidade){
 void buscarLivros(Livro acervo[], int quantidade){
     int codigoBusca;
     int encontrou = 0;
-    if (quantidade == 0){
+    if (quantidade == 0){ 
         printf("\nO acervo esta vazio.\n");
     }
     printf("\n--- Buscar Livro ---\n");
@@ -62,14 +62,14 @@ void buscarLivros(Livro acervo[], int quantidade){
             break;
         }
     }
-    if(!encontrou){
+    if(!encontrou){ 
         printf("\nLivro com o codigo %d nao foi encontrado no acervo", codigoBusca);
     }
 }
 
 void imprimirLivros(Livro acervo[], int quantidade){
     printf("\n--- Lista de Livros (%d cadastrados) ---\n", quantidade);
-    if(quantidade ==0){
+    if(quantidade ==0){ 
         printf("O acervo está vazio. \n");
     }
     for (int i = 0; i < quantidade; i++){
