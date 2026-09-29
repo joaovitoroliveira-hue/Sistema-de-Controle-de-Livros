@@ -1,4 +1,4 @@
-857468 JoaoVitor EngenhariaDeDados
+857468 JoaoPedro EngenhariaDeDados
 857469 LucasMatheus AnaliseDeDados
 857470 SimoniOliveira Enfermagem
 857471 HelbertSilva Matematica
