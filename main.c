@@ -9,6 +9,7 @@ int main() {
     int quantidadeAtual2 = carregarUsuarios(lista);
     int opcao;
 
+    
     do{
         printf("\n--- Sistema Bibliotecario ---\n");
         printf("1. Adicionar livro\n");
