@@ -3,6 +3,7 @@
 #define MAX_LIVROS 100
 #define MAX_USUARIO 100
 
+
 typedef struct {
     int codigo;
     char titulo[50];
